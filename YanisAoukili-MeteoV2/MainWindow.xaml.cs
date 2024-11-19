@@ -74,7 +74,7 @@ namespace YanisAoukili_MeteoV2
                 var sday = fcst_sday.day_long;
                 var tday = fcst_tday.day_long;
 
-                //  EN Previsions des temp 
+                //  Previsions des temp 
                 var fday_tempmin = fcst_fday.tmin;
                 var sday_tempmin = fcst_sday.tmin;
                 var tday_tempmin = fcst_tday.tmin;
@@ -82,7 +82,7 @@ namespace YanisAoukili_MeteoV2
                 var sday_tempmax = fcst_sday.tmax;
                 var tday_tempmax = fcst_tday.tmax;
 
-                // VARIABLES POUR LES ICONS DE LA METEO
+                //  ICONs metto
 
                 string current_condition_icon = current_condition.icon_big;
                 Uri asset0 = new Uri(current_condition_icon);
