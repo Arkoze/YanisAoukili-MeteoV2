@@ -1,0 +1,79 @@
+﻿<Window x:Class="YanisAoukili_MeteoV2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="YanisAoukili_MeteoV2"
+        mc:Ignorable="d"
+        Title="WeatherApp" Height="850" Width="478">
+    <Grid>
+
+        <Grid.Resources>
+            <Style TargetType="{x:Type TextBox}">
+                <Setter Property="Background" Value="Transparent"/>
+                <Setter Property="BorderThickness" Value="0"/>
+            </Style>
+        </Grid.Resources>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBox Grid.Row="1" Grid.ColumnSpan="4" Name="TB_City" TextAlignment="Center" Height="60" FontSize="50" Foreground="#FFFFFF"/>
+        <TextBox Grid.Row="2" Grid.ColumnSpan="4" Name="TB_Temp" TextAlignment="Center" Height="60" Width="160" FontSize="50" Foreground="#FFFFFF"/>
+
+        <TextBox Grid.Row="5" Grid.Column="1" Name="TB_Fcst_Fday" TextAlignment="Center" Height="40" FontSize="29" Foreground="#FFFFFF"/>
+        <TextBox Grid.Row="6" Grid.Column="1" Name="TB_Fcst_Sday" TextAlignment="Center" Height="40" FontSize="29" Foreground="#FFFFFF"/>
+        <TextBox Grid.Row="7" Grid.Column="1" Name="TB_Fcst_Tday" TextAlignment="Center" Height="40" FontSize="29" Foreground="#FFFFFF"/>
+
+        <TextBox Grid.Row="5" Grid.Column="2" Name="TB_Tempmin_Fday" TextAlignment="Center" Height="40" FontSize="30" Foreground="#FFFFFF"/>
+        <TextBox Grid.Row="6" Grid.Column="2" Name="TB_Tempmin_Sday" TextAlignment="Center" Height="40" FontSize="30" Foreground="#FFFFFF"/>
+        <TextBox Grid.Row="7" Grid.Column="2" Name="TB_Tempmin_Tday" TextAlignment="Center" Height="40" FontSize="30" Foreground="#FFFFFF"/>
+        <TextBox Grid.Row="5" Grid.Column="3" Name="TB_Tempmax_Fday" TextAlignment="Center" Height="40" FontSize="30" Foreground="#FFFFFF"/>
+        <TextBox Grid.Row="6" Grid.Column="3" Name="TB_Tempmax_Sday" TextAlignment="Center" Height="40" FontSize="30" Foreground="#FFFFFF"/>
+        <TextBox Grid.Row="7" Grid.Column="3" Name="TB_Tempmax_Tday" TextAlignment="Center" Height="40" FontSize="30" Foreground="#FFFFFF"/>
+
+        <ComboBox Name="CB_Cities" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" Margin="20, 20, 0, 0" SelectionChanged="CB_Cities_SelectionChanged"/>
+
+        <TextBox Name="TB_EnterCity" Grid.Column="2" Grid.ColumnSpan="2" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" Margin="20, 20, 0, 0" BorderThickness="3"/>
+
+        <Button Name="BTN_Add" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="60" Height="35" Margin="20, 20, 0, 0" Content="Ajouter" Click="BTN_Add_Click"/>
+
+        <Button Name="BTN_Reset" Grid.Column="0" Grid.Row="2" HorizontalAlignment="Left" VerticalAlignment="Top" Width="60" Height="35" Margin="20, 20, 0, 0" Content="Reset" Click="BTN_Reset_Click"/>
+
+        <Grid Grid.Row="3" Grid.RowSpan="2" Grid.Column="1" Grid.ColumnSpan="2">
+            <Image x:Name="ImgDay"/>
+        </Grid>
+
+        <Grid Grid.Row="5" Grid.Column="0">
+            <Image x:Name="ImgDay1"/>
+        </Grid>
+
+        <Grid Grid.Row="6" Grid.Column="0">
+            <Image x:Name="ImgDay2"/>
+        </Grid>
+
+        <Grid Grid.Row="7" Grid.Column="0">
+            <Image x:Name="ImgDay3"/>
+        </Grid>
+
+        <Grid.Background>
+            <ImageBrush Stretch="Fill" ImageSource="images/bg.jpg"/>
+        </Grid.Background>
+
+    </Grid>
+</Window>
